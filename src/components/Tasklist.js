@@ -1,5 +1,5 @@
 import React,  {useEffect, useState} from 'react';
-import firebase from '../util/firebase'; 
+import fire from '../util/firebase'; 
 import "../App.css";
 import Task from './Task';
 import List from '@material-ui/core/List';
@@ -11,7 +11,7 @@ export default function TaskList(){
 
     const [taskList, setTaskList] = useState();
     useEffect(()=>{
-        const taskRef = firebase.database().ref('Task');
+        const taskRef = fire.dgdfabbatabase().ref('Task');
         taskRef.on('value', (snapshot)=> {
         const tasks = snapshot.val();
         const taskList = [];

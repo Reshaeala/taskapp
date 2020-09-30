@@ -1,37 +1,50 @@
 import React from "react";
-import firebase from '../util/firebase';
-import Button from '@material-ui/core/Button';
+import {Form, Button, Card } from "react-bootstrap";
+import GoogleSignup from "../components/GoogleSignup";
 
-class SignUp extends React.Component {
 
-  signUp() {
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then((u) => {
-        console.log('Successfully Signed Up');
-      })
-      .catch((err) => {
-        console.log('Error: ' + err.toString());
-      })
-  }
+export default function SignUp(props) {
+        const {email,
+        setEmail,
+        password,
+        setPassword,
+        handleSignIn,
+        handleSignUp,
+        hasAccount,
+        setHasAccount,
+        emailError,
+        passwordError} = props;
 
-  
-    render(){
 	return (
-		<div style={{ textAlign: 'center' }}>
-        <div>
-          <div>Email</div>
-          <input id="email" placeholder="Enter Email.." type="text"/>
-        </div>
-        <div>
-          <div>Password</div>
-          <input id="password" placeholder="Enter Password.." type="text"/>
-        </div>
-        <Button onClick={this.signUp}>Sign Up</Button>
+		<div > 
+    <h1>Sign Up!</h1> 
+    <Card body className="logform" > 
+    
+        <Form>
+            <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+                </Form.Text>
+            </Form.Group>
+
+            <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+            <div className="signbtn">
+            <Button variant="primary" type="submit">
+                Sign Up
+            </Button>
+             <GoogleSignup/>
+             </div>
+            </Form>
+            <p>Have an account?  <a href="/signin" >  Sign In</a></p>
+		</Card>
+
+
       </div>
 	)
-    }
 }
 
-export default SignUp;

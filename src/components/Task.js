@@ -1,14 +1,14 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import firebase from '../util/firebase';
+import fire from '../util/firebase';
 
 export default function Task({task}) {
     const deleteTask= () => {
-        const taskRef = firebase.database().ref('Task').child(task.id);
+        const taskRef = fire.database().ref('Task').child(task.id);
         taskRef.remove();
     }
     const completeTask= () => {
-        const taskRef = firebase.database().ref('Task').child(task.id);
+        const taskRef = fire.database().ref('Task').child(task.id);
         taskRef.update({
             complete: !task.complete, 
         });

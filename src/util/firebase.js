@@ -1,6 +1,8 @@
 import firebase from "firebase";
+import "firebase/auth";
+import "firebase/firestore";
 
-   const firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyAp4Ce9RZ9wv0gKBItcbkriA3TvZjdJGtY",
     authDomain: "tasklist-290920.firebaseapp.com",
     databaseURL: "https://tasklist-290920.firebaseio.com",
@@ -10,7 +12,9 @@ import firebase from "firebase";
     appId: "1:362411408273:web:c17917d712a8369f7e3830",
     measurementId: "G-KX9XYY1V5X"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
-  export default firebase;
+ const fire = firebase.initializeApp(firebaseConfig);
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+  export default fire;
