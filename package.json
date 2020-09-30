@@ -37,7 +37,25 @@
       "last 1 safari version"
     ]
   },
+<<<<<<< HEAD
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reshaeala/taskapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reshaeala/taskapp/issues"
+  },
+  "homepage": "https://github.com/Reshaeala/taskapp#readme"
+=======
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1"
   }
+>>>>>>> 7b2abb5fb7259c79088f3e4812c5e765df637253
 }

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import React from "react";
+import "./App.css";
+// import Forms from './components/Forms'
+
+function App() {
+	return (
+		<div>
+			<h1>Todo</h1>
+			{/* <input type="text" /> */}
+		</div>
+	);
+=======
 import React, {useState, useEffect} from "react";
 import 'materialize-css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -38,6 +51,7 @@ function App() {
 
         );
 
+>>>>>>> 7b2abb5fb7259c79088f3e4812c5e765df637253
 }
 
 export default App;

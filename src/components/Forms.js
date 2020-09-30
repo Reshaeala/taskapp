@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from "react";
+
+export default function Forms() {
+	return (
+		<div>
+			<input type="text" />
+		</div>
+	);
+=======
 import React, {useState} from 'react';
 import firebase from '../util/firebase';
 import Button from '@material-ui/core/Button';
@@ -25,4 +35,5 @@ export default function Forms() {
             <Button variant="contained" color="primary" onClick={createTask}>Add To List</Button>
         </div>
     )
+>>>>>>> 7b2abb5fb7259c79088f3e4812c5e765df637253
 }
