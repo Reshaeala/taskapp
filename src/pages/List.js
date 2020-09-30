@@ -1,13 +1,14 @@
- import React from "react";
- import Forms from '../components/Forms';
+import React from "react";
+import Forms from '../components/Forms';
 import Tasklist from '../components/Tasklist';
 import {Button} from "react-bootstrap";
+import NavBar from '../components/NavBar';
 
-export default function List({handleLogout}) {
+export default function List() {
 	return (
 		<div >
-        <nav><Button onClick={handleLogout}>Logout</Button></nav>
-         <Forms/>
+        <NavBar/>
+        <Forms/>
         <Tasklist />
         
 		</div>
