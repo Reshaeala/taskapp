@@ -1,0 +1,23 @@
+/* body{
+    background: gainsboro;
+} */
+h1{
+    display: flex;
+    justify-content: center;
+}
+.list{
+    display: flex;
+    justify-content: center;
+}
+.form{
+   display: flex;
+    justify-content: center;  
+}
+
+.completebtn{
+    background-color: greenyellow !important;
+}
+
+.complete{
+    text-decoration: line-through;
+}
