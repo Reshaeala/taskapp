@@ -1,18 +1,19 @@
 import React from "react";
 import {Nav, Navbar} from "react-bootstrap";
-import Logout from './Logout'
-export default function NavBar() {
+import Logout from './Logout';
+import SignIn from './SignIn';
+
+export default function NavBar({handleLogout}) {
 	return (
 		<div >
-
-    <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark">
     
-    <Nav className="mr-auto">
-      <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/"></Nav.Link>
-    </Nav>
+                <Nav className="mr-auto">
+                    <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                
+                </Nav>
    
-  </Navbar>
+            </Navbar>
 		</div>
 	);
 }
